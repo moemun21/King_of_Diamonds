@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>◆King of Diamonds◆</title>
+    <link rel="stylesheet" href="mainStyle.css">
+</head>
+<body>
+    
+    <div class="gamegui">
+        <nav class="players">
+            <h4>Player: <span id="p1sc">0</span></h4>
+            <h4>CPU 1: <span id="p2sc">0</span></h4>
+            <h4>CPU 2: <span id="p3sc">0</span></h4>
+            <h4>CPU 3: <span id="p4sc">0</span></h4>
+            <h4>CPU 4: <span id="p5sc">0</span></h4>
+        </nav>
+        <form onSubmit="JavaScript:calculate()" action="#">
+            <h2 class="label">◆King of Diamond◆</h2>
+            <h4 id="status">‎</h4>
+            <div class="rules">
+                <p style="text-decoration: underline;font-weight: bold;">Game Rules: </p>
+                <p>-Every player enters a number and average is multiplied by 0.8 as <span style="color: green;">TARGET</span> </p>
+                <p>-Closest to <span style="color: green;">TARGET</span> wins round and rest players <span style="color: red;">GET -1</span></p>
+                <p>-Who reaches <span style="color: red;">-10 LOSES</span>, last standing <span style="color: green;">WINS</span></p>
+                <p id="newrule1">‎</p>
+                <p id="newrule2">‎</p>
+                <p id="newrule3">‎</p>
+            </div>
+            <h5 class="msg">Enter Number From 0 - 100</h5>
+            <div class="data">
+                <div class="data-in">
+                    <h3>TARGET: <span id="target">0</span></h3>
+                </div>
+                <div class="userin">
+                    <input type="text" id="number">
+                    <h5 class="msg" id="msg2">‎ </h5>
+                    <input type="submit" value="Submit" id="submit">
+                </div>
+                <div class="data-in">
+                    <h3 id="round-win">‎</h3>
+                    <a href="JavaScript:h2p()" class="h2p">How to play</a>
+                    <br>
+                    <br>
+                    <a href="JavaScript:ng()" class="ng">-Start New Game-</a>
+                </div>
+            </div>
+        </form>
+    </div>
+<script src="gameFuncs.js"></script>
+</body>
+</html>
